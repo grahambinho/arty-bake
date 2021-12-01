@@ -1,0 +1,109 @@
+@charset "UTF-8";
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  overflow-x: hidden;
+}
+header
+{
+  background-color: #3498db;
+}
+nav
+{
+  background-color: #3498db;
+}
+.navbar-brand, .nav-item a, .main-heading, h1, h2, h3, h4, h5, h6
+{
+  font-family: 'Lobster', cursive;
+}
+/*Override Bootstrap border on nav button.*/
+.navbar-toggler
+{
+  border: 0;
+}
+.navbar-toggler:focus
+{
+  box-shadow: none;
+}
+.nav-item
+{
+  font-size: 26px;
+}
+p, a, abbr, li
+{
+  font-family: 'Arial', sans-serif;
+}
+.main-heading
+{
+  font-size: 80px;
+}
+.heading
+{
+  margin-bottom: 22px;
+}
+h2
+{
+  font-size: 50px;
+}
+.upfront
+{
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.subheading, address
+{
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+#hero
+{
+  height: auto;
+  position: relative;
+  background-color: #85929e;
+}
+/*Overriding Bootstrap carousel font colour.*/
+.carousel-dark .carousel-item:nth-child(2) .carousel-caption, .carousel-dark .carousel-item:nth-child(3) .carousel-caption
+{
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon
+{
+  filter: invert(0);
+}
+#super-heading
+{
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+h1.main-heading
+{
+  color: #3498db;
+  text-align: center;
+  text-shadow: 1px 1px 0px #fff;
+}
+#intro
+{
+  height: auto;
+  padding: 50px;
+  background-color: #eaeded;
+}
+footer
+{
+  height: auto;
+  padding: 40px 0;
+  background-color: #3498db;
+}
+address
+{
+  color: #fff;
+  margin: 0;
+}
