@@ -53,6 +53,8 @@ h1{
 	display: inline-block;
 	vertical-align: top;
 	border-left: 5px double #A439A4;
+	text-align: center;
+	padding: 0px 0px 0px 40px;
 }
 
 table, th, td {
@@ -68,10 +70,87 @@ p{
 
 h4{
 	text-align: center;
-	padding-bottom: 10px;
+	padding-top:1px;
+	padding-bottom: 1px;
 }
 
 #quantity{
 	margin-left: 25px;
+}
+
+#filtdiv{
+	display: flex;
+	flex-direction: row;
+	border: 5px double #A439A4;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	padding: 5px 5px 5px 5px;
+}
+
+.filcontainer1{
+	flex-grow: 1;
+	height: 100px;
+	text-align: center;
+}
+
+.filcontainer2{
+	flex-grow: 1;
+	height: 100px;
+	text-align: center;
+	padding: 15px 0px 15px 0px;
+}
+
+.filcontainer3{
+	flex-grow: 1;
+	height: 100px;
+	text-align: center;
+	padding: 10px 0px 15px 0px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  background: url('../images/arty-bake-logo.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border: 0;
+  background: url('../images/arty-bake-logo.png');
+  cursor: pointer;
+}
+
+.minus{
+	display: inline;
+}
+
+.quant{
+	display: inline;
+}
+
+.plus{
+	display: inline;
+}
+
+b{
+	padding: 5px 0px 5px 0px;
 }
 

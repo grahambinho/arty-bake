@@ -7,6 +7,34 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
 	</head>
 	<body>
+		<div id="filtdiv">
+			<div class="filcontainer1">
+				<h4>Price per Item</h4>
+				<input type="range" min="1" max="9" value="9" class="slider" id="pricefil">
+				<p>Price Range: &euro;0.00 - &euro;<span id="pricefilval"></span></p>
+			</div>
+			<div class="filcontainer1">
+				<h4>Calories</h4>
+				<input type="range" min="1" max="600" value="600" class="slider" id="calfil">
+				<p>Max Calories: <span id="calfilval"></span></p>
+			</div>
+			<div class="filcontainer2">
+				<h4>Allergens to Exclude</h4>
+				<label for="checkgluten">Gluten </label>
+				<input type="checkbox" id="checkgluten">
+				<label for="checknuts">Nuts </label>
+				<input type="checkbox" id="checknuts">
+				<label for="checkmilk">Milk </label>
+				<input type="checkbox" id="checkmilk">
+				<label for="checkeggs">Eggs </label>
+				<input type="checkbox" id="checkeggs">
+			</div>
+			<div class="filcontainer3">
+				<b id="shown"></b></br>
+				<button onclick="goShopping()" id="filterbutton">Apply Filters</button></br>
+				<b id="filtout"></b>
+			</div>
+		</div>
 		<template>
 			<div class="products">
 				<div class="prodone">
@@ -30,14 +58,13 @@
 				</div>
 				<div class="prodbuy">
 					</br>
-					<h4>Price per item:</h4>
+					<h4>Price per Item:</h4>
 					<h4 id="price"></h4>
+					</br>
+					<button id="basketbutton" onclick="showBasket()" >Show Basket</button>
 					</br>
 					</br>
 					<h4>Enter quantity:</h4>
-					<input id="quantity">
-					<button id="baskbut" type="button" onclick="quansub()">Add to basket</button>
-					<p id="check"></p>
 				</div>
 			</div>
 		</template>
