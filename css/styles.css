@@ -5,21 +5,27 @@
   padding: 0;
   box-sizing: border-box;
 }
+html
+{
+  scroll-behavior: smooth;
+}
 body
 {
   overflow-x: hidden;
+  position: relative;
 }
-header
-{
-  background-color: #3498db;
-}
-nav
+header, nav
 {
   background-color: #3498db;
 }
 .navbar-brand, .nav-item a, .main-heading, h1, h2, h3, h4, h5, h6
 {
   font-family: 'Lobster', cursive;
+}
+/*Override the left and right padding, or gutter, used on row elements in Bootstrap*/
+.row .carousel
+{
+  --bs-gutter-x:  0;
 }
 /*Override Bootstrap border on nav button.*/
 .navbar-toggler
@@ -34,7 +40,15 @@ nav
 {
   font-size: 26px;
 }
-p, a, abbr, li
+.navbar-light .navbar-nav .nav-link.active
+{
+  color:  #f94bb6;
+}
+.navbar-light .navbar-nav .nav-link
+{
+  color:  var(--bs-white);
+}
+p, a, abbr, li, label
 {
   font-family: 'Arial', sans-serif;
 }
@@ -44,17 +58,23 @@ p, a, abbr, li
 }
 .heading
 {
-  margin-bottom: 22px;
+  margin: 22px 0;
 }
 h2
 {
   font-size: 50px;
 }
+h3
+{
+  font-size: 35px;
+}
 .upfront
 {
+  color: var(--bs-white);
   display: block;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #3498db;
+  border-radius:  15px;
 }
 .subheading, address
 {
@@ -64,14 +84,20 @@ h2
 #hero
 {
   height: auto;
+  margin: 0;
   position: relative;
   background-color: #85929e;
 }
-/*Overriding Bootstrap carousel font colour.*/
-.carousel-dark .carousel-item:nth-child(2) .carousel-caption, .carousel-dark .carousel-item:nth-child(3) .carousel-caption
+/*Overriding Bootstrap carousel.*/
+.carousel-item .carousel-caption
 {
+  padding: 8px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.carousel-caption h2
+{
+  font-size: 34px;
 }
 .carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon
 {
@@ -90,11 +116,146 @@ h1.main-heading
   text-align: center;
   text-shadow: 1px 1px 0px #fff;
 }
-#intro
+#gallery
 {
   height: auto;
-  padding: 50px;
-  background-color: #eaeded;
+}
+.content
+{
+  height: auto;
+  padding: 50px 20px;
+  background-color: var(--bs-white);
+}
+.sub
+{
+  height: auto;
+  padding: 0;
+  border: 1px solid #fff;
+  transition: 0.5s ease-in-out 0s;
+  overflow: hidden;
+}
+.square
+{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: relative;
+  transition: 0.5s ease-in-out 0s;
+}
+.sub:hover
+{
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
+}
+.square span
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--bs-white);
+  font-size: 30px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--bs-transparent);
+  text-shadow: 1px 1px 5px var(--bs-dark);
+}
+.sub:nth-child(1) .square
+{
+  background: url("../images/macarons.jpg") 50% 50% / cover no-repeat #fff;
+}
+.sub:nth-child(2) .square
+{
+  background: url("../images/cupcakes.jpg") 50% 50% / cover no-repeat #fff;
+}
+.sub:nth-child(3) .square
+{
+  background: url("../images/bread.jpg") 50% 50% / cover no-repeat #fff;
+}
+.sub:nth-child(4) .square
+{
+  background: url("../images/cheesecake.jpg") 50% 50% / cover no-repeat #fff;
+}
+#gallery .sub:hover .square
+{
+  transform: scale(1.2);
+}
+input, textarea, select
+{
+  width: 250px;
+  padding: 2px 6px;
+  outline: 0;
+  border-width: 2px;
+}
+input:focus, textarea:focus, select:focus
+{
+  border: 2px solid #3498db;
+}
+select
+{
+  padding: 5px;
+}
+.caution
+{
+  color: #e74c3c;
+  font-family: 'Courier New', sans-serif;
+}
+.form-button
+{
+  width: auto;
+  border: 0;
+  color: #fff;
+  margin-top: 20px;
+  padding: 14px 18px;
+  float: left;
+}
+form section
+{
+  margin: 12px 0;
+}
+input[type="submit"]
+{
+  margin-left: 20px;
+  background-color: #3498db;
+  border: 1px solid #3498db;
+  transition: 0.5s ease-in-out 0s;
+}
+input[type="submit"]:hover
+{
+  color: #3498db;
+  background-color: #fff;
+  border: 1px solid #3498db;
+}
+input[type="reset"]
+{
+  color: #3498db;
+  background-color: var(--bs-white);
+  border: 1px solid #3498db;
+  transition: 0.5s ease-in-out 0s;
+}
+input[type="reset"]:hover
+{
+  color: #fff;
+  background-color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+section > img
+{
+  width: 100%;
+  margin-top: 50px;
+}
+#goToTop
+{
+  position: fixed;
+  z-index: 99;
+  right: 50px;
+  bottom: 50px;
+  outline: 0;
+  color: #fff;
+  background-color: #3498db;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  padding: 15px;
+  transition: 0.8s ease-in-out 0s;
 }
 footer
 {
@@ -106,4 +267,62 @@ address
 {
   color: #fff;
   margin: 0;
+}
+.show
+{
+  display: block;
+}
+.hide
+{
+  display: none;
+}
+@media only screen and (max-width: 989px)
+{
+  .main-heading
+  {
+    font-size: 70px;
+  }
+}
+@media only screen and (max-width: 767px)
+{
+  section:nth-of-type(2)
+  {
+    margin-top: 0 !important;
+  }
+  section:last-of-type
+  {
+    margin-bottom: 20px;
+  }
+  .main-heading
+  {
+    font-size: 60px;
+  }
+  .upfront
+  {
+    width: 50%;
+  }
+  .content
+  {
+    padding: 0 20px 0;
+  }
+  #gallery
+  {
+    height: 500px;
+  }
+  input, textarea, select
+  {
+    width: 100%;
+  }
+  input[type="submit"]
+  {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 570px)
+{
+  input[type="submit"], input[type="reset"]
+  {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
 }
