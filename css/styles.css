@@ -261,6 +261,7 @@ section > img
 {
   color: #3498db;
   background-color: #fff;
+  border: 2px solid #3498db;
 }
 footer
 {
