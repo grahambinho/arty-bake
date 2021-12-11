@@ -57,7 +57,7 @@
       </div>
     </nav>
 	</header>
-	<body>
+	<body id="shop">
 		<div class="container-fluid">
 			<div id="filtdiv">
 				<div class="row">	
@@ -74,13 +74,13 @@
 					<div class="col-lg-3 filcontainer2">
 						<h4 class="shoph4">Allergens to Exclude</h4>
 						<label for="checkgluten">Gluten </label>
-						<input type="checkbox" id="checkgluten">
+						<input class="shopinput" type="checkbox" id="checkgluten">
 						<label for="checknuts">Nuts </label>
-						<input type="checkbox" id="checknuts">
+						<input class="shopinput" type="checkbox" id="checknuts">
 						<label for="checkmilk">Milk </label>
-						<input type="checkbox" id="checkmilk">
+						<input class="shopinput" type="checkbox" id="checkmilk">
 						<label for="checkeggs">Eggs </label>
-						<input type="checkbox" id="checkeggs">
+						<input class="shopinput" type="checkbox" id="checkeggs">
 					</div>
 					<div class="col-lg-3 filcontainer3">
 						<b id="shown"></b></br>
@@ -98,7 +98,7 @@
 							<img class = "mx-auto d-block rounded-circle">
 						</div>
 						<div class="col-lg-3 p-3">
-							<h1></h1>
+							<h1 class="shoph1"></h1>
 							<p></p>
 						</div>
 						<div class="proddeets col-lg-3 text-center">
@@ -145,7 +145,7 @@
 		<footer class="col-md-12">
 			<address>&copy; <span id="currentYear"></span> Arty Bake Ltd.</address>
 		</footer>
-		<script onload = "goShopping()" src="../js/script.js"></script>
+		<script onload = "shopJava()" src="../js/script.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<body>
 </html>

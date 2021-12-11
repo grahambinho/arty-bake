@@ -225,8 +225,33 @@ var madeira = {
 	allergic: false
 };
 
+
 //array of full product range
 let prodlist = [blueberry, chococup, gfbrown, gbread, ricecrisp, chococake, madeira];
+//Check if the ID of the body tag includes 'shop' to run the form validation on submit
+let bodyID2 = document.getElementsByTagName("body")[0].id;
+if(bodyID2.includes("shop")){
+	shopJava();
+}
+
+function shopJava(){
+	//variables needed for price slider
+	var pricefilval = document.getElementById("pricefilval");
+	var initprice = document.getElementById("pricefil").value;
+	//set initial max slider value for price
+	pricefilval.innerHTML = initprice+".00";
+	//action listener for price slider
+	document.getElementById("pricefil").addEventListener("input", filterone);
+	
+	//variables needed for calories slider
+	var calfilval = document.getElementById("calfilval");
+	var initcal = document.getElementById("calfil").value;
+	//set initial max slider value for calories
+	calfilval.innerHTML = initcal;
+	//action listener for calories slider
+	document.getElementById("calfil").addEventListener("input", filtertwo);
+	goShopping();
+}
 
 //this function firstly applies filters, then creates a node for each relevant product using a template and adds them to html
 function goShopping(){
@@ -308,24 +333,11 @@ function goShopping(){
 	}
 }
 
-//variables needed for price slider
-var pricefilval = document.getElementById("pricefilval");
-var initprice = document.getElementById("pricefil").value;
-//set initial max slider value for price
-pricefilval.innerHTML = initprice+".00";
-//action listener for price slider
-document.getElementById("pricefil").addEventListener("input", filterone);
 //this function updates price slider value
 function filterone(){
 	pricefilval.innerHTML=pricefil.value+".00";
 }
-//variables needed for calories slider
-var calfilval = document.getElementById("calfilval");
-var initcal = document.getElementById("calfil").value;
-//set initial max slider value for calories
-calfilval.innerHTML = initcal;
-//action listener for calories slider
-document.getElementById("calfil").addEventListener("input", filtertwo);
+
 //this function updates calorie slider value
 function filtertwo(){
 	calfilval.innerHTML=calfil.value;
