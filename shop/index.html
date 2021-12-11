@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/styles.css"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+		<meta charset="utf-8">
+		<title>Arty Bake Shop&mdash; The Original Artisanal Bakery</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta type="content" description="Arty Bake is the home of the finest bakes in Dublin. We're proud to bring you the best-tasting pastries, cupcakes and doughnuts.">
+		<meta name="date" content="2021-11-29">
+		<meta name="author" content="Artisan bakery">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="Artisan bakery">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="robots" content="noindex, nofollow">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://artofgraham.github.io/artisan-bakery">
+		<meta property="og:title" content="Artisan bakery">
+		<meta property="og:description" content="The home of the finest bakes in Dublin. We're proud to bring you the best-tasting pastries, cupcakes and doughnuts.">
+		<meta property="og:image" content="../images/arty-bake-logo.png">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<link rel="canonical" href="https://artofgraham.github.io/artisan-bakery">
+		<link rel="icon" href="../images/arty-bake-logo.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../images/arty-bake-logo.png" width="50" height="auto" alt="Arty Bake logo.">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop/index.html">Shop</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	</header>
+	<body>
+		<div class="container-fluid">
+			<div id="filtdiv">
+				<div class="row">	
+					<div class="col-lg-3 filcontainer1">
+						<h4 class="shoph4">Price per Item</h4>
+						<input type="range" min="1" max="9" value="9" class="slider" id="pricefil">
+						<p>Price Range: &euro;0.00 - &euro;<span id="pricefilval"></span></p>
+					</div>
+					<div class="col-lg-3 filcontainer1">
+						<h4 class="shoph4">Calories</h4>
+						<input type="range" min="1" max="600" value="600" class="slider" id="calfil">
+						<p>Max Calories: <span id="calfilval"></span></p>
+					</div>
+					<div class="col-lg-3 filcontainer2">
+						<h4 class="shoph4">Allergens to Exclude</h4>
+						<label for="checkgluten">Gluten </label>
+						<input type="checkbox" id="checkgluten">
+						<label for="checknuts">Nuts </label>
+						<input type="checkbox" id="checknuts">
+						<label for="checkmilk">Milk </label>
+						<input type="checkbox" id="checkmilk">
+						<label for="checkeggs">Eggs </label>
+						<input type="checkbox" id="checkeggs">
+					</div>
+					<div class="col-lg-3 filcontainer3">
+						<b id="shown"></b></br>
+						<button onclick="goShopping()" id="filterbutton">Apply Filters</button></br>
+						<b id="filtout"></b>
+					</div>
+				</div>
+			</div>
+		</div>
+		<template>
+			<div class="container-fluid">
+				<div class="products">
+					<div class="row">
+						<div class="prodimages col-lg-3">
+							<img class = "mx-auto d-block rounded-circle">
+						</div>
+						<div class="col-lg-3 p-3">
+							<h1></h1>
+							<p></p>
+						</div>
+						<div class="proddeets col-lg-3 text-center">
+							<table>
+								<tr>
+									<th>Allergens</th>
+								</tr>
+							</table>
+							</br>
+							</br>
+							<table>
+								<tr>
+									<th>Calories</th>
+								</tr>
+							</table>
+						</div>
+						<div class="prodbuy col-lg-3 text-center p-3">
+							</br>
+							<h4 class="shoph4">Price per Item:</h4>
+							<h4 class="shoph4" id="price"></h4>
+							</br>
+							<button id="basketbutton" class="btn-outline btn-lg" data-bs-toggle="offcanvas" data-bs-target="#basket" onclick="showBasket()">Show Basket</button>
+							</br>
+							</br>
+							<h4 class="shoph4">Enter quantity:</h4>
+						</div>
+					</div>
+				</div>
+			<div>
+		</template>
+		<div id="shopdiv"></div>
+		<div class="offcanvas offcanvas-end" id="basket">
+			<div class="offcanvas-header" id="4align">
+				<h1 class="offcanvas-title">Basket</h1>
+				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+			</div>
+			<div class="offcanvas-body">
+				<p id="basketinfo"></p>
+				<h4 id="baskettotal"></h4>
+				<button class="btn btn-secondary" type="button">Pay Now</button>
+			</div>
+		</div>
+		<button id="goToTop" class="hide">Top</button>
+		<footer class="col-md-12">
+			<address>&copy; <span id="currentYear"></span> Arty Bake Ltd.</address>
+		</footer>
+		<script onload = "goShopping()" src="../js/script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<body>
+</html>

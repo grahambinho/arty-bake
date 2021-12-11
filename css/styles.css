@@ -268,6 +268,7 @@ address
   color: #fff;
   margin: 0;
 }
+<<<<<<< HEAD
 .show
 {
   display: block;
@@ -325,4 +326,173 @@ address
     width: 100%;
     margin: 20px 0 0 0;
   }
+=======
+
+h4.shoph4{
+	font-family: "Arial";
+	font-size: 1.2em;
+	font-weight:bold;
+}
+
+#shopdiv{
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+
+.products{
+	border: 5px double #A439A4;
+	border-radius: 40px 20px 0px 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 15px 15px 15px 15px;
+}
+
+.prodimages{
+	display:flex;
+	max-height:250px;
+	margin-left: auto;
+    margin-right: auto;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+
+h1{
+	font-family: "Pacifico", serif;
+	color: #A439A4;
+	text-align: center;
+	vertical-align: top;
+	margin: 15px 15px 15px 15px;
+}
+
+.prodone{
+	display: flex;
+	width: 300px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.prodinfo{
+	display: flex;
+	width: 25%;
+	display: inline-block;
+}
+
+.proddeets{
+    justify-content: center;
+    align-items: center;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+
+.prodbuy{
+}
+
+table, th, td{
+  border:1px solid black;
+  text-align: center;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p{
+	text-align: center;
+}
+
+#quantity{
+	margin-left: 25px;
+}
+
+#filtdiv{
+	border: 5px double #A439A4;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top:10px;
+	padding: 15px 15px 15px 15px;
+}
+
+.filcontainer1{
+	height: 100px;
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+
+.filcontainer2{
+	height: 100px;
+	text-align: center;
+	padding: 15px 0px 15px 0px;
+}
+
+.filcontainer3{
+	height: 100px;
+	text-align: center;
+	padding: 10px 0px 15px 0px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  background: url('../images/slidericon.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border: 0;
+  background: url('../images/slidericon.png');
+  cursor: pointer;
+}
+
+.minus{
+	display: inline;
+	padding: 5px;
+}
+
+.quant{
+	display: inline;
+	font-family: "Arial";
+	font-size: 1.2em;
+	font-weight:bold;
+}
+
+.plus{
+	display: inline;
+	font-family: "Arial";
+	padding: 5px;
+}
+
+b{
+	padding: 5px 0px 5px 0px;
+}
+
+#filterbutton{
+	margin: 5px 5px 5px 5px;
+	padding: 5px;
+}
+
+#basketinfo{
+	text-align:left;
+>>>>>>> f38b6a1f2e1f4a5fedcb7dcc1f2ae87c2d8b5682
 }
