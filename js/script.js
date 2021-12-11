@@ -11,7 +11,7 @@ function activeURL(){
 	navLink = document.getElementsByClassName("nav-link");
 	for(i = 0; i < navLink.length; i++){
 		let navAttr = navLink[i].getAttribute("href");
-		if(navAttr.indexOf(dirName) == false || navAttr.indexOf("#") == false){
+		if(navAttr.indexOf(dirName) == false || navAttr.indexOf("/") == false){
 			test = navAttr.indexOf(dirName);
 			navLink[i].classList.add("active");
 		} else if(navAttr.indexOf(dirName) !== false){
