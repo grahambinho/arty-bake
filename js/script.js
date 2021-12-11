@@ -379,6 +379,3 @@ function showBasket(){
 	document.getElementById("baskettotal").innerHTML="Total = \u20AC"+r+".00<br><br>";
 	document.getElementById("basketinfo").innerHTML+=msg;
 }
-		
-	
-	
