@@ -297,7 +297,7 @@ h4.shoph4
 }
 .products
 {
-	border: 5px double #A439A4;
+	border: 5px double #a439a4;
 	border-radius: 40px 20px 0px 0px;
 	margin-left: 20px;
 	margin-right: 20px;
@@ -307,14 +307,13 @@ h4.shoph4
 {
 	display: flex;
 	align-items: center;
-	max-height:250px;
 	margin-left: auto;
   margin-right: auto;
 }
 h1.shoph1
 {
 	font-family: "Pacifico", serif;
-	color: #A439A4;
+	color: #a439a4;
 	text-align: center;
 	vertical-align: top;
 	margin: 15px 15px 15px 15px;
@@ -354,8 +353,9 @@ table, th, td
 {
 	margin-left: 25px;
 }
-#filtdiv{
-	border: 5px double #A439A4;
+#filtdiv
+{
+	border: 5px double #a439a4;
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top:10px;
