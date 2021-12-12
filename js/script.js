@@ -11,11 +11,8 @@ function activeURL(){
 	navLink = document.getElementsByClassName("nav-link");
 	for(i = 0; i < navLink.length; i++){
 		let navAttr = navLink[i].getAttribute("href");
-		console.log(navLink);
 		let navItem = navLink[i].innerHTML.toLowerCase();
-		//if(navAttr.indexOf(dirName) == false || navAttr.indexOf("/") == false){
-		if(dirName == navItem){
-			//test = navAttr.indexOf(dirName);
+		if(dirName == navItem || dirName == "arty-bake"){
 			navLink[i].classList.add("active");
 		} else if(dirName !== navItem){
 			navLink[i].classList.remove("active");
