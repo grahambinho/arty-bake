@@ -14,7 +14,7 @@ function activeURL(){
 		let navItem = navLink[i].innerHTML.toLowerCase();
 		if(dirName == navItem || dirName == "arty-bake"){
 			navLink[i].classList.add("active");
-		} else if(dirName !== navItem){
+		} else if(dirName !== navItem || dirName !== "arty-bake"){
 			navLink[i].classList.remove("active");
 		}
 	}
