@@ -13,7 +13,7 @@ function activeURL(){
 		console.log(dirName, navItem);
 		if(dirName == navItem || navItem == "home"){
 			navLink[i].classList.add("active");
-		} else if(dirName !== navItem){
+		} else if(dirName !== navItem || navItem !== "home"){
 			navLink[i].classList.remove("active");
 		}
 	}
