@@ -13,10 +13,10 @@ function activeURL(){
 		let navAttr = navLink[i].getAttribute("href");
 		console.log(navAttr);
 		//if(navAttr.indexOf(dirName) == false || navAttr.indexOf("/") == false){
-		if(navAttr.contains(dirName) || navAttr.contains("/")){
+		if(navAttr.includes(dirName) || navAttr.includes("/")){
 			test = navAttr.indexOf(dirName);
 			navLink[i].classList.add("active");
-		} else if(!navAttr.contains(dirName)){
+		} else if(!navAttr.includes(dirName)){
 			navLink[i].classList.remove("active");
 		}
 	}
