@@ -12,11 +12,12 @@ function activeURL(){
 	for(i = 0; i < navLink.length; i++){
 		let navAttr = navLink[i].getAttribute("href");
 		console.log(navLink);
+		let navItem = navLink[i].innerHTML.toLowerCase();
 		//if(navAttr.indexOf(dirName) == false || navAttr.indexOf("/") == false){
-		if(navAttr.includes(dirName) || navAttr.includes("/")){
-			test = navAttr.indexOf(dirName);
+		if(dirName == navItem){
+			//test = navAttr.indexOf(dirName);
 			navLink[i].classList.add("active");
-		} else if(!navAttr.includes(dirName)){
+		} else if(dirName !== navItem){
 			navLink[i].classList.remove("active");
 		}
 	}
