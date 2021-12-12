@@ -6,7 +6,7 @@ function activeURL(){
 	let dir = path.substring(0, path.lastIndexOf("/"));
 	//console.log(dir);
 	dirName = dir.substring(dir.lastIndexOf("/") + 1);
-	console.log(dirName);
+	//console.log(dirName);
 	let navLink = [];
 	navLink = document.getElementsByClassName("nav-link");
 	for(i = 0; i < navLink.length; i++){
