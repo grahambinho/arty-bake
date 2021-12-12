@@ -11,9 +11,11 @@ function activeURL(){
 	for(i = 0; i < navLink.length; i++){
 		let navItem = navLink[i].innerHTML.toLowerCase();
 		console.log(dirName, navItem);
-		if(dirName == navItem || navItem == "home"){
+		if(dirName == navItem){
 			navLink[i].classList.add("active");
-		} else if(dirName !== navItem || navItem !== "home"){
+		} else if(dirName == "arty-bake"){
+			navLink[i].classList.add("active");
+		} else if(dirName !== navItem){
 			navLink[i].classList.remove("active");
 		}
 	}
