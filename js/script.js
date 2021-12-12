@@ -11,10 +11,12 @@ function activeURL(){
 	navLink = document.getElementsByClassName("nav-link");
 	for(i = 0; i < navLink.length; i++){
 		let navAttr = navLink[i].getAttribute("href");
-		if(navAttr.indexOf(dirName) == false || navAttr.indexOf("/") == false){
+		console.log(navAttr);
+		//if(navAttr.indexOf(dirName) == false || navAttr.indexOf("/") == false){
+		if(navAttr.contains(dirName) || navAttr.contains("/")){
 			test = navAttr.indexOf(dirName);
 			navLink[i].classList.add("active");
-		} else if(navAttr.indexOf(dirName) !== false){
+		} else if(!navAttr.contains(dirName)){
 			navLink[i].classList.remove("active");
 		}
 	}
