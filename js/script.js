@@ -19,7 +19,7 @@ function activeURL(){
 		} else if(!navAttr.includes(dirName)){
 			navLink[i].classList.remove("active");
 		}
-	//}
+	}
 }
 //Check if the ID of the body tag includes 'contact' to run the form validation on submit
 let bodyID = document.getElementsByTagName("body")[0].id;
