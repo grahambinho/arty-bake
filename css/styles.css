@@ -449,6 +449,35 @@ input.shopinput
 {
 	width: 25px;
 }
+/*Sarah added these for social media styling*/
+.fa
+{
+padding: 20px;
+font-size: 30px;
+width: 50px;
+text-align: centre;
+text-decoration: none;
+}
+.fa-facebook
+{
+background: #3B5998;
+color: white;
+}
+.fa-twitter
+{
+background: #55ACEE;
+color: white;
+}
+.fa-snapchat
+{
+background: yellow;
+color: white;
+}
+.fa-pinterest
+{
+background: red;
+color: white;
+}
 /*Cathal added this media query.*/
 @media only screen and (max-width: 989px)
 {
