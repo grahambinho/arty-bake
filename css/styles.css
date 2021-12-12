@@ -39,6 +39,7 @@ header, nav
 .nav-item
 {
   font-size: 26px;
+  transition: 0.5s ease-in-out 0s;
 }
 .navbar-light .navbar-nav .nav-link.active
 {
