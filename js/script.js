@@ -13,9 +13,9 @@ function activeURL(){
 		console.log(dirName, navItem);
 		if(dirName == navItem){
 			navLink[i].classList.add("active");
-		} else if(navItem == "home"){
+		} else if(dirName == "arty-bake" && navItem == "home"){
 			navLink[i].classList.add("active");
-		} else if(dirName !== navItem || navItem !== "home"){
+		} else if(dirName !== navItem || (dirName == "arty-bake" && navItem == "home")){
 			navLink[i].classList.remove("active");
 		}
 	}
