@@ -15,7 +15,7 @@ function activeURL(){
 			navLink[i].classList.add("active");
 		} else if(navItem == "home"){
 			navLink[i].classList.add("active");
-		} else if(dirName !== navItem){
+		} else if(dirName !== navItem || navItem !== "home"){
 			navLink[i].classList.remove("active");
 		}
 	}
