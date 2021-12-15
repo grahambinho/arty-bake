@@ -451,6 +451,10 @@ input.shopinput
 {
 	width: 25px;
 }
+#deetstext
+{
+	text-align: center;
+}
 /*Sarah added these for social media styling*/
 .fa
 {
