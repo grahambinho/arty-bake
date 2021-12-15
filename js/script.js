@@ -18,14 +18,15 @@ function activeURL(){
 		}
 	}
 }
-//Check if the ID of the body tag includes 'contact' to run the form validation on submit
+//Check if the ID of the body tag includes 'contact' to run the form validation on submit.
 let bodyID = document.getElementsByTagName("body")[0].id;
 if(bodyID.includes("contact")){
 	formValidation();
 }
 //Form validation and submission.
 function formValidation(){
-	let webForm = document.getElementsByTagName("form")[0], msg = document.getElementById("message"), cautionSpan = [], fDetails = [], emailDomains = [".ie", ".com", ".org", ".net", ".info", ".gov"], user = document.getElementById("user");
+	let webForm = document.getElementsByTagName("form")[0], msg = document.getElementById("message"), cautionSpan = [], fDetails = [], user = document.getElementById("user");
+	const emailDomains = new Array(".org", ".info", ".gov");
 	document.forms["online-contact"].addEventListener("submit", formSubmission);
 	function formSubmission(){
 		fDetails = document.getElementsByClassName("detail");
@@ -38,54 +39,54 @@ function formValidation(){
 			contactType = document.getElementById("contact-type").value;
 			comment = document.getElementById("comment").value;
 			if(fname == ""){
-				//First name validation
+				//First name validation.
 				cautionSpan[0].classList.replace("hide", "show");
 			} else{
 				cautionSpan[0].classList.replace("show", "hide");
 			}
 			if(lname == ""){
-				//Last name validation
+				//Last name validation.
 				cautionSpan[1].classList.replace("hide", "show");
 			} else{
 				cautionSpan[1].classList.replace("show", "hide");
 			}
 			if(email == ""){
-				//Email validation
+				//Email validation.
 				cautionSpan[2].classList.replace("hide", "show");
 			} else{
 				cautionSpan[2].classList.replace("show", "hide");
 			}
 			if(phone == ""){
-				//Phone number validation
+				//Phone number validation.
 				cautionSpan[3].classList.replace("hide", "show");
 			} else{
 				cautionSpan[3].classList.replace("show", "hide");
 			}
 			if(contactType == ""){
-				//Contact-type validation
+				//Contact-type validation.
 				cautionSpan[4].classList.replace("hide", "show");
 			} else{
 				cautionSpan[4].classList.replace("show", "hide");
 			}
 			if(comment == ""){
-				//Comment validation
+				//Comment validation.
 				cautionSpan[5].classList.replace("hide", "show");
 			} else{
 				cautionSpan[5].classList.replace("show", "hide");
 			}
-			//If the form is successfully completed, "submit" it
+			//If the form is successfully completed, "submit" it.
 			if(fname !== "" && lname !== "" && email !== "" && phone !== "" && contactType !== "" && comment !== ""){
-				//Hides the form if validation is successful
+				//Hides the form if validation is successful.
 				webForm.classList.add("hide");
-				//Stores user's first name for the post-form message and displays the message
+				//Stores user's first name for the post-form message and displays the message.
 				user.innerHTML = fname;
 				msg.classList.replace("hide", "show");
 			}
 		}
-		//Prevents the form submitting; no server-side processing
+		//Prevents the form submitting; no server-side processing.
 		event.preventDefault();
 	}
-	//Remove all the validation messages from the form when reset
+	//Remove all the validation messages from the form when reset.
 	document.forms["online-contact"].addEventListener("reset", clearFormValidation);
 	function clearFormValidation(){
 		for(i = 0; i < cautionSpan.length; i++){
@@ -93,7 +94,7 @@ function formValidation(){
 		}
 	}
 }
-//Display the scroll-to-top button when scroll length is greater than 500px
+//Display the scroll-to-top button when scroll length is greater than 500px.
 document.addEventListener("scroll", scrolling);
 function scrolling(){
 	goToTop = document.getElementById("goToTop"), pageScroll = window.pageYOffset;
@@ -104,8 +105,8 @@ function scrolling(){
 	}
 }
 $(document).ready(function(){
-	$('#carouselExampleDark').on('slide.bs.carousel', function(){
-		$('.carousel').carousel({
+	$("#carouselExampleDark").on("slide.bs.carousel", function(){
+		$(".carousel").carousel({
 			interval: 1000
 		})
 	})
@@ -124,7 +125,7 @@ function getYear(){
 	currentYear.innerHTML = yearNow;
 }
 
-//products as objects with key value pairs for required info
+//products as objects with key value pairs for required info.
 var blueberry = {
 	name: "Blueberry Muffins",
 	price: 3,
