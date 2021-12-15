@@ -25,7 +25,7 @@ header, nav
 /*Override the left and right padding, or gutter, used on row elements in Bootstrap*/
 .row .carousel
 {
-  --bs-gutter-x:  0;
+  --bs-gutter-x: 0;
 }
 /*Override Bootstrap border on nav button.*/
 .navbar-toggler
@@ -43,11 +43,11 @@ header, nav
 }
 .navbar-light .navbar-nav .nav-link.active
 {
-  color:  #f94bb6;
+  color: #f94bb6;
 }
 .navbar-light .navbar-nav .nav-link
 {
-  color:  var(--bs-white);
+  color: var(--bs-white);
 }
 p, a, abbr, li, label
 {
@@ -75,7 +75,7 @@ h3
   display: block;
   margin: 0 auto;
   background-color: #3498db;
-  border-radius:  15px;
+  border-radius: 15px;
 }
 .subheading, address
 {
@@ -387,14 +387,15 @@ table, th, td
 .slider
 {
   -webkit-appearance: none;
+  appearance: none;
   width: 70%;
   height: 10px;
   border-radius: 5px;
   background: #d3d3d3;
-  outline: none;
+  outline: 0;
   opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 .slider::-webkit-slider-thumb
 {
@@ -455,7 +456,7 @@ input.shopinput
 padding: 20px;
 font-size: 30px;
 width: 50px;
-text-align: centre;
+text-align: center;
 text-decoration: none;
 }
 .fa-facebook
