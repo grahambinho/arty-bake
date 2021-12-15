@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Arty Bake Shop&mdash; The Original Artisanal Bakery</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 		<meta name="description" content="Shop the 'Arty Bake' store for the finest bakes in Dublin. Find the freshest pastries, cupcakes, doughnuts and more.">
 		<meta name="date" content="2021-11-29">
 		<meta name="author" content="Arty Bake">
@@ -81,8 +81,8 @@
 						<input class="shopinput" type="checkbox" id="checkeggs">
 					</div>
 					<div class="col-lg-3 filcontainer3">
-						<b id="shown"></b></br>
-						<button onclick="goShopping()" id="filterbutton">Apply Filters</button></br>
+						<b id="shown"></b><br>
+						<button onclick="goShopping()" id="filterbutton">Apply Filters</button><br>
 						<b id="filtout"></b>
 					</div>
 				</div>
@@ -105,8 +105,8 @@
 									<th>Allergens</th>
 								</tr>
 							</table>
-							</br>
-							</br>
+							<br>
+							<br>
 							<table>
 								<tr>
 									<th>Calories</th>
@@ -114,18 +114,18 @@
 							</table>
 						</div>
 						<div class="prodbuy col-lg-3 text-center p-3">
-							</br>
+							<br>
 							<h4 class="shoph4">Price per Item:</h4>
 							<h4 class="shoph4" id="price"></h4>
-							</br>
+							<br>
 							<button id="basketbutton" class="btn-outline btn-lg" data-bs-toggle="offcanvas" data-bs-target="#basket" onclick="showBasket()">Show Basket</button>
-							</br>
-							</br>
+							<br>
+							<br>
 							<h4 class="shoph4">Enter quantity:</h4>
 						</div>
 					</div>
 				</div>
-			<div>
+			</div>
 		</template>
 		<div id="shopdiv"></div>
 		<div class="offcanvas offcanvas-end" id="basket">
@@ -139,11 +139,11 @@
 				<button class="btn btn-secondary" type="button">Pay Now</button>
 			</div>
 		</div>
-		<button id="goToTop" class="hide">Top</button>
+		<button id="goToTop" class="hide" title="Scroll to the top">Top</button>
 		<footer class="col-md-12">
 			<address>&copy; <span id="currentYear"></span> Arty Bake Ltd.</address>
 		</footer>
-		<script onload = "shopJava()" src="../js/script.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	<body>
+		<script onload = "shopJava()" src="../js/script.js"></script>
+	</body>
 </html>
