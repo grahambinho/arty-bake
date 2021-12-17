@@ -10,7 +10,7 @@ function activeURL(){
 	navLink = document.getElementsByClassName("nav-link");
 	for(i = 0; i < navLink.length; i++){
 		let navItem = navLink[i].innerHTML.toLowerCase();
-		console.log(dirName, navItem);
+		//console.log(dirName, navItem);
 		if(dirName == navItem || (dirName == "arty-bake" && navItem == "home")){
 			navLink[i].classList.add("active");
 		} else if(dirName !== navItem || (dirName == "arty-bake" && navItem == "home")){
