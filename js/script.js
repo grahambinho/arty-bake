@@ -128,7 +128,7 @@ function getYear(){
 var blueberry = {
 	name: "Blueberry Muffins",
 	price: 3,
-	objtext: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+	objtext: "These hearty muffins are great with coffee or tea. We used fresh blueberries, and they're baked every morning. They're big sellers, so pop in quick to treat yourself.",
 	calories: 467,
 	allergens: ["Eggs", "Gluten"],
 	objimage: "../images/blueberry.jpg",
@@ -142,7 +142,7 @@ var blueberry = {
 var chococup = {
 	name: "Chocolate Cupcakes",
 	price: 3,
-	objtext: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+	objtext: "Who doesn't love a cupcake! They may be small but they pack a punch.. of flavours, of course. They're also lightly glazed for extra yumminess.",
 	calories: 241,
 	allergens: ["Milk", "Gluten"],
 	objimage: "../images/chococup.jpg",
@@ -157,7 +157,7 @@ var chococup = {
 var gfbrown = {
 	name: "Gluten-free Brownies",
 	price: 5,
-	objtext: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+	objtext: "Using cornflour and organic dark chocolate, these bakes are our biggest seller among coeliacs and non-coeliacs alike. Why not treat yourself!",
 	calories: 261,
 	allergens: ["Eggs", "Milk", "Nuts"],
 	objimage: "../images/brownie.jpg",
@@ -171,7 +171,7 @@ var gfbrown = {
 var gbread = {
 	name: "Gingerbread Treats",
 	price: 4,
-	objtext: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+	objtext: "Gingerbread is a staple treat in almost every home. Our gingerbread treats use the freshest ginger with a decent pinch of cinnamon.",
 	calories: 305,
 	allergens: ["Gluten", "Eggs"],
 	objimage: "../images/gingerbread.jpg",
@@ -185,7 +185,7 @@ var gbread = {
 var ricecrisp = {
 	name: "Rice Crispie Treats",
 	price: 2,
-	objtext: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+	objtext: "Rice crispies are known the world over. These cakes are arguably biscuits, but nonetheless are the tastiest and guilt-free pleasures.",
 	calories: 168,
 	allergens: ["None"],
 	objimage: "../images/ricecrisp.jpg",
@@ -199,7 +199,7 @@ var ricecrisp = {
 var chococake = {
 	name: "Mini Chocolate Cake",
 	price: 8,
-	objtext: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+	objtext: "The mini chocolate cake is a favourite of all chocolate lovers. It contains choc-chip pieces and a generous amount of chocolate sauce on the top.",
 	calories: 577,
 	allergens: ["Gluten", "Milk", "Eggs"],
 	objimage: "../images/chococake.jpg",
@@ -213,7 +213,7 @@ var chococake = {
 var madeira = {
 	name: "Madeira Cake",
 	price: 7,
-	objtext: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+	objtext: "This famous English cake, despite its name, uses the freshest lemons and organic almonds with a light sponge. Best enjoyed with a glass of Madeira wine or a cup of tea!",
 	calories: 504,
 	allergens: ["Gluten", "Eggs", "Nuts"],
 	objimage: "../images/madeira.jpg",
