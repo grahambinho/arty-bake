@@ -484,9 +484,24 @@ input.shopinput
   background: red;
   color: white;
 }
+.parallax
+{
+  background-image: url("../images/bread.jpg");
+  min-height: 600px;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /*Cathal added this media query.*/
 @media only screen and (max-width: 989px)
 {
+  .parallax
+  {
+    min-height: 300px;
+    background-attachment: scroll;
+    background-position: 50% 50%;
+  }
   .main-heading
   {
     font-size: 70px;
