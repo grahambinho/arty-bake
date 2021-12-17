@@ -81,6 +81,7 @@ function formValidation(){
 				//Stores user's first name for the post-form message and displays the message.
 				user.innerHTML = fname;
 				msg.classList.replace("hide", "show");
+				stickyFooter();
 			}
 		}
 		//Prevents the form submitting; no server-side processing.
@@ -324,7 +325,7 @@ function goShopping(){
 		//finally add node to document
 		document.getElementById("shopdiv").appendChild(node);
 	}
-	shopStickyFooter();
+	stickyFooter();
 }
 
 //this function updates price slider value
@@ -375,14 +376,15 @@ function showBasket(){
 }
 
 //function to stick footer to bottom on shop page if content too small
-function shopStickyFooter(){
-	docHeight = document.getElementById("shop").offsetHeight;
+function stickyFooter(){
+	docHeight = document.getElementsByTagName("body")[0].offsetHeight;
 	screenHeight = screen.height;
+	footerElem = document.getElementsByTagName("footer")[0];
 	if(docHeight < screenHeight){
-		document.getElementById("shopfooter").style.position = "fixed";
-		document.getElementById("shopfooter").style.bottom = "0";
+		footerElem.style.position = "fixed";
+		footerElem.style.bottom = "0";
 	} else{
-		document.getElementById("shopfooter").style.position = "";
-		document.getElementById("shopfooter").style.bottom = "";
+		footerElem.style.position = "";
+		footerElem.style.bottom = "";
 	}
 }
