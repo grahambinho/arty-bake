@@ -331,6 +331,7 @@ function goShopping(){
 		//finally add node to document
 		document.getElementById("shopdiv").appendChild(node);
 	}
+	shopStickyFooter();
 }
 
 //this function updates price slider value
@@ -379,3 +380,18 @@ function showBasket(){
 	document.getElementById("baskettotal").innerHTML="Total = \u20AC"+r+".00<br><br>";
 	document.getElementById("basketinfo").innerHTML+=msg;
 }
+
+//function to stick footer to bottom on shop page if content too small
+function shopStickyFooter(){
+	var docHeight = document.getElementById("shop").offsetHeight;
+	var screenHeight = screen.height;
+	if(docHeight < screenHeight){
+			document.getElementById("shopfooter").style.position = "fixed";
+			document.getElementById("shopfooter").style.bottom = "0";
+		}
+	else{
+		document.getElementById("shopfooter").style.position = "";
+		document.getElementById("shopfooter").style.bottom = "";
+	}
+}
+
