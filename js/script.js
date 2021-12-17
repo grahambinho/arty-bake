@@ -104,12 +104,11 @@ function scrolling(){
 		goToTop.classList.replace("show", "hide");
 	}
 }
+//jQuery interval for each slide of the carousel on the home page.
 $(document).ready(function(){
-	$("#carouselExampleDark").on("slide.bs.carousel", function(){
-		$(".carousel").carousel({
-			interval: 1000
-		})
-	})
+	$('.carousel').carousel({
+		interval: 1000 * 7
+	});
 });
 //jQuery smooth scroll to the top of a page.
 $(document).ready(function(){
@@ -263,17 +262,13 @@ function goShopping(){
 	for(let i=0; i<prodlist.length; i++){
 		if(document.getElementById("checkgluten").checked==true && prodlist[i].allergens.includes("Gluten")){
 			prodlist[i].allergic=true;
-		}
-		else if(document.getElementById("checknuts").checked==true && prodlist[i].allergens.includes("Nuts")){
+		} else if(document.getElementById("checknuts").checked==true && prodlist[i].allergens.includes("Nuts")){
 			prodlist[i].allergic=true;
-		}
-		else if(document.getElementById("checkmilk").checked==true && prodlist[i].allergens.includes("Milk")){
+		} else if(document.getElementById("checkmilk").checked==true && prodlist[i].allergens.includes("Milk")){
 			prodlist[i].allergic=true;
-		}
-		else if(document.getElementById("checkeggs").checked==true && prodlist[i].allergens.includes("Eggs")){
+		} else if(document.getElementById("checkeggs").checked==true && prodlist[i].allergens.includes("Eggs")){
 			prodlist[i].allergic=true;
-		}
-		else{
+		} else{
 			prodlist[i].allergic=false;
 		}
 	}
@@ -281,9 +276,7 @@ function goShopping(){
 	for(let i=0; i<prodlist.length; i++){
 		if(prodlist[i].price<=pricefil.value && prodlist[i].calories<=calfil.value && prodlist[i].allergic==false){
 			displaylist.push(prodlist[i]);
-		}
-		else{
-			;
+		} else{
 		}
 	}		
 	//update count of shown/filtered
@@ -383,15 +376,13 @@ function showBasket(){
 
 //function to stick footer to bottom on shop page if content too small
 function shopStickyFooter(){
-	var docHeight = document.getElementById("shop").offsetHeight;
-	var screenHeight = screen.height;
+	docHeight = document.getElementById("shop").offsetHeight;
+	screenHeight = screen.height;
 	if(docHeight < screenHeight){
-			document.getElementById("shopfooter").style.position = "fixed";
-			document.getElementById("shopfooter").style.bottom = "0";
-		}
-	else{
+		document.getElementById("shopfooter").style.position = "fixed";
+		document.getElementById("shopfooter").style.bottom = "0";
+	} else{
 		document.getElementById("shopfooter").style.position = "";
 		document.getElementById("shopfooter").style.bottom = "";
 	}
 }
-
